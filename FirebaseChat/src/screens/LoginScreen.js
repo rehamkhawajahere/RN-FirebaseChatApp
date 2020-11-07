@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Title} from 'react-native-paper';
-import {FormInput} from '../components/FormInput';
-import {FormButton} from '../components/FormButton';
+import FormInput from '../components/FormInput';
+import FormButton from '../components/FormButton';
 
-export const Login = () => {
+export default function Login({navigation}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -33,10 +33,11 @@ export const Login = () => {
         modeValue="text"
         uppercase={false}
         labelStyle={styles.navButtonText}
+        onPress={() => navigation.navigate('Signup')}
       />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {

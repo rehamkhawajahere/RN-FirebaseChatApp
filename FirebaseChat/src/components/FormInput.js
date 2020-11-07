@@ -4,7 +4,7 @@ import {TextInput} from 'react-native-paper';
 
 const {width, height} = Dimensions.get('screen');
 
-const FormInput = ({labelName, ...rest}) => {
+export default function FormInput({labelName, ...rest}) {
   return (
     <TextInput
       label={labelName}
@@ -13,7 +13,7 @@ const FormInput = ({labelName, ...rest}) => {
       {...rest}
     />
   );
-};
+}
 
 const styles = StyleSheet.create({
   input: {
@@ -23,5 +23,3 @@ const styles = StyleSheet.create({
     height: height / 15,
   },
 });
-
-export default FormInput;
