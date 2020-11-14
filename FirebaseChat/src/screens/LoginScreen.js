@@ -5,14 +5,15 @@ import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 import {AuthContext} from '../navigation/AuthProvider';
 
-export default function Login({navigation}) {
+export default function LoginScreen({navigation}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   const {login} = useContext(AuthContext);
 
   return (
     <View style={styles.container}>
-      <Title style={styles.titleText}>Welcome to FirebaseChat app</Title>
+      <Title style={styles.titleText}>Welcome to Chat app</Title>
       <FormInput
         labelName="Email"
         value={email}
